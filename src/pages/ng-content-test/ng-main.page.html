@@ -1,0 +1,17 @@
+<ion-header class="ng-content-test">
+	<ion-toolbar>
+		<ion-buttons left *ngIf="Nav.canGoBack()">
+			<button ion-button (click)="GoBack()">
+                <ion-icon name="arrow-back"></ion-icon>
+            </button>
+		</ion-buttons>
+		<ion-title>NgContentTest</ion-title>
+	</ion-toolbar>
+</ion-header>
+<ion-content>
+	<test-content>
+		<footer>
+			<p>Test ng-content</p>
+		</footer>
+	</test-content>
+</ion-content>

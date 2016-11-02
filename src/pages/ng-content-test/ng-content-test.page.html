@@ -1,0 +1,11 @@
+<p class="test">
+	Add toto:
+	<input #box (keyup.enter)="AddValue(box.value)" (blur)="AddValue(box.value);box.value=''">
+	<button ion-button ion-only (click)="AddValue(box.value)" small>
+            <ion-icon name="add"></ion-icon>
+        </button>
+</p>
+<ng-content select="footer"></ng-content>
+<ion-list>
+	<ion-item *ngFor="let Data of Datas">{{Data}}</ion-item>
+</ion-list>

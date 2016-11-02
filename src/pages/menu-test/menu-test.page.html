@@ -1,0 +1,14 @@
+<!--<ion-menu [content]="content">
+    <ion-header>
+        <ion-toolbar>
+            <ion-title>Menus</ion-title>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-list>
+            <button ion-item *ngFor="let menu of menus" (click)="openPage(menu)">{{menu.Title}}</button>
+        </ion-list>
+    </ion-content>
+</ion-menu>-->
+<!--<ion-nav #content swipeBackEnabled="false"></ion-nav>-->
+<ion-nav id="nav" [root]="rootPage" [rootParams]="menus" #content swipeBackEnabled="false"></ion-nav>

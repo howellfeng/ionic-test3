@@ -1,0 +1,20 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+            <ion-icon name="wifi"></ion-icon>
+        </button>
+		<ion-title>Segment Test</ion-title>
+	</ion-navbar>
+</ion-header>
+<ion-content class="segment-test-page">
+	<!--Segment使用ionSelect修改展示结果-->
+	<ion-segment [(ngModel)]="RuleType">
+		<ion-segment-button value="Berth" (ionSelect)="Selected('Berth')">Berth</ion-segment-button>
+		<ion-segment-button value="First" (ionSelect)="Selected('First')">First</ion-segment-button>
+		<ion-segment-button value="Second" (ionSelect)="Selected('Second')">Second</ion-segment-button>
+		<ion-segment-button value="Third" (ionSelect)="Selected('Third')">Third</ion-segment-button>
+	</ion-segment>
+	<ion-list>
+		<ion-item *ngFor="let value of Values">{{value}}</ion-item>
+	</ion-list>
+</ion-content>

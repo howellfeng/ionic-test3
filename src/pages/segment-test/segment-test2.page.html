@@ -1,0 +1,31 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+            <ion-icon name="menu"></ion-icon>
+        </button>
+		<ion-title>Segment Test</ion-title>
+	</ion-navbar>
+</ion-header>
+<ion-content class="segment-test-page">
+	<!--segment使用Switch-->
+	<ion-segment [(ngModel)]="RuleType">
+		<ion-segment-button value="Berth">Berth</ion-segment-button>
+		<ion-segment-button value="First">First</ion-segment-button>
+		<ion-segment-button value="Second">Second</ion-segment-button>
+		<ion-segment-button value="Third">Third</ion-segment-button>
+	</ion-segment>
+	<div [ngSwitch]="RuleType">
+		<div *ngSwitchCase="'Berth'">
+			<p>Berth RuleType:{{RuleType}}</p>
+		</div>
+		<div *ngSwitchCase="'First'">
+			<p>First RuleType:{{RuleType}}</p>
+		</div>
+		<div *ngSwitchCase="'Second'">
+			<p>Second RuleType:{{RuleType}}</p>
+		</div>
+		<div *ngSwitchCase="'Third'">
+			<p>Third RuleType:{{RuleType}}</p>
+		</div>
+	</div>
+</ion-content>

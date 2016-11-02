@@ -1,0 +1,29 @@
+<ion-header class="menu">
+	<ion-toolbar>
+		<ion-buttons left *ngIf="Nav.canGoBack()">
+			<button ion-button (click)="GoBack()">
+				<ion-icon name="arrow-back" ></ion-icon>
+			</button>
+		</ion-buttons>
+		<ion-title *ngIf="CurrentItem">{{CurrentItem.Title}}</ion-title>
+		<ion-buttons right *ngIf="!Nav.canGoBack()">
+			<button ion-button>
+				<ion-icon name="person"></ion-icon>
+			</button>
+		</ion-buttons>
+	</ion-toolbar>
+</ion-header>
+<ion-content class="menu">
+	<ion-grid>
+		<ion-row *ngFor="let Group of Groups">
+			<ion-col width-33 *ngFor="let Item of Group">
+				<div>
+					<button ion-button (click)="OpenPage(Item)" icon-top>
+                    <ion-icon name="{{Item.Icon}}"></ion-icon>                    
+                </button>
+					<p>{{Item.Title}}</p>
+				</div>
+			</ion-col>
+		</ion-row>
+	</ion-grid>
+</ion-content>

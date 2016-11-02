@@ -1,0 +1,70 @@
+<ion-header>
+	<ion-navbar>
+		<button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+		<ion-title>Hello Ionic</ion-title>
+	</ion-navbar>
+</ion-header>
+
+
+<ion-content padding class="hello-ionic-page">
+	<ion-fab middle center #fab>
+		<button ion-fab>
+			<ion-icon name="add"></ion-icon>
+		</button>
+		<ion-fab-list side="top">
+			<button ion-fab (click)="Click('facebook',fab)">
+				<ion-icon name="logo-facebook"></ion-icon>
+			</button>
+			<button ion-fab (click)="Click('twitter',fab)">
+				<ion-icon name="logo-twitter"></ion-icon>
+			</button>
+			<button ion-fab (click)="Click('vimeo',fab)">
+				<ion-icon name="logo-vimeo"></ion-icon>
+			</button>
+			<button ion-fab (click)="Click('google',fab)">
+				<ion-icon name="logo-googleplus"></ion-icon>
+			</button>
+			<ion-fab #fab2>
+				<button ion-fab mini>
+					<ion-icon name="wifi"></ion-icon>
+				</button>
+				<ion-fab-list side="left">
+					<button ion-fab (click)="Click2('arrow-forward',fab,fab2)">
+						<ion-icon name="arrow-forward"></ion-icon>
+					</button>
+				</ion-fab-list>
+				<ion-fab-list side="right">
+					<button ion-fab (click)="Click2('arrow-back',fab,fab2)">
+						<ion-icon name="arrow-back"></ion-icon>
+					</button>
+				</ion-fab-list>
+				<ion-fab-list side="top">
+					<button ion-fab (click)="Click2('arrow-down',fab,fab2)">
+						<ion-icon name="arrow-down"></ion-icon>
+					</button>
+				</ion-fab-list>
+				<ion-fab-list side="bottom">
+					<button ion-fab (click)="Click2('arrow-up',fab,fab2)">
+						<ion-icon name="arrow-up"></ion-icon>
+					</button>
+				</ion-fab-list>
+			</ion-fab>
+		</ion-fab-list>
+	</ion-fab>
+
+	<h3>Welcome to your first Ionic app!</h3>
+
+	<p>
+		This starter project is our way of helping you get a functional app running in record time.
+	</p>
+	<p>
+		Follow along on the tutorial section of the Ionic docs!
+	</p>
+	<p>
+		<button ion-button color="primary" menuToggle>Toggle Menu</button>
+	</p>
+	<p>{{Time}} </p>
+
+</ion-content>
